@@ -1116,7 +1116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _skybox: {fileID: 0}
-  gates: []
+  gates:
+  - {fileID: 385873126193624970}
 --- !u!1001 &95130787626671780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8211,8 +8212,23 @@ PrefabInstance:
       propertyPath: rightGate
       value: 
       objectReference: {fileID: 5671166682343833626}
+    - target: {fileID: 6005489886811001125, guid: e2157fe8bae0c3943b7705e346d011d8, type: 3}
+      propertyPath: spaceShipPart
+      value: 
+      objectReference: {fileID: 3824007643157082871}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2157fe8bae0c3943b7705e346d011d8, type: 3}
+--- !u!114 &385873126193624970 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6005489886811001125, guid: e2157fe8bae0c3943b7705e346d011d8, type: 3}
+  m_PrefabInstance: {fileID: 6200661377505420975}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15fee8fd2f8bd144f95accc514259840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2263526157634342074 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5288498817684498965, guid: e2157fe8bae0c3943b7705e346d011d8, type: 3}

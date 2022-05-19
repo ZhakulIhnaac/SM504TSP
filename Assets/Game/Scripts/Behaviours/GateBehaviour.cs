@@ -11,20 +11,22 @@ namespace Game.Scripts.Behaviours
         [SerializeField] private Transform leftGate;
         [SerializeField] private Transform rightGate;
         [SerializeField] private GameObject canvas;
-        [SerializeField] private Collider collider;
+        [SerializeField] private Transform spaceShipPart;
 
         public void Open()
         {
             Destroy(canvas);
-            Destroy(collider);
             
             leftGate.transform.DORotate(new Vector3(0f, -90f, 0f), 0.3f)
                 .SetRelative(true);
             
             rightGate.transform.DORotate(new Vector3(0f, 90f, 0f), 0.3f)
                 .SetRelative(true);
-            
-            Opened?.Invoke();
+
+            spaceShipPart.DOMoveY(50f, 10f)
+                .SetEase(Ease.Linear)
+                .SetRelative(true)
+                .OnComplete(() => Opened?.Invoke());
         }
     }
 }
