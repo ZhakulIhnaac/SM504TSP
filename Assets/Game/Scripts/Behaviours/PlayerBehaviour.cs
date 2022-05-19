@@ -31,6 +31,7 @@ namespace Game.Scripts.Behaviours
             if (keyObject != null)
             {
                 CollectKeyToggle(keyObject, true);
+                Destroy(keyObject.gameObject);
             }
             
             ////////////////DOOR/////////////////

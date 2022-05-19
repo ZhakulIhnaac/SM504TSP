@@ -16,6 +16,8 @@ namespace Game.Scripts.Controllers
         private int successCounterIndex = 0;
         private bool unlocked;
 
+        public PuzzlePlateBehaviour[] PuzzlePlatesSuccessOrder => puzzlePlatesSuccessOrder;
+        
         private void Awake()
         {
             foreach (var puzzlePlate in puzzlePlates)
@@ -35,11 +37,6 @@ namespace Game.Scripts.Controllers
                 if (successCounterIndex != puzzlePlatesSuccessOrder.Length) return;
                 
                 ToggleLock();
-                    
-                foreach (var puzzlePlate in puzzlePlates)
-                {
-                    puzzlePlate.Invoked -= OnPlateInvoked;
-                }
             }
             else
             {
@@ -62,11 +59,16 @@ namespace Game.Scripts.Controllers
             }
         }
 
-        private void ToggleLock()
+        public void ToggleLock()
         {
             lockFences.DOMoveY(-3.95f, 0.5f)
                 .SetRelative(true)
                 .SetEase(Ease.Linear);
+            
+            foreach (var puzzlePlate in puzzlePlates)
+            {
+                puzzlePlate.Invoked -= OnPlateInvoked;
+            }
         }
         
         private void CollectPlateSuccess(PuzzlePlateBehaviour plateToCollect, bool isCollected)

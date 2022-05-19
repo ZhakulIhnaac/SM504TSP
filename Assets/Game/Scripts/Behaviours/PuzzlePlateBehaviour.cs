@@ -1,5 +1,6 @@
 ﻿using System;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 namespace Game.Scripts.Behaviours
@@ -12,6 +13,7 @@ namespace Game.Scripts.Behaviours
         [SerializeField] private Material successMaterial;
         [SerializeField] private MeshRenderer meshRenderer;
 
+        public TextMeshProUGUI copyText;
         private bool opened;
 
         private void OnTriggerEnter(Collider other)
