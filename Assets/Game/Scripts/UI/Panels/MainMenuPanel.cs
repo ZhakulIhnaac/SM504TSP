@@ -42,12 +42,14 @@ namespace Game.Scripts.UI.Panels
         private void OnContinueButtonClicked()
         {
             BfgGameController.Instance.LoadNextLevel();
+            Close();
         }
 
         private void OnNewGameButtonClicked()
         {
             PlayerPrefs.DeleteAll();
             BfgGameController.Instance.LoadNextLevel();
+            Close();
         }
 
         private void OnLevelsButtonClicked()

@@ -18,9 +18,9 @@ public class Player : MonoBehaviour {
 
 		void Update (){
 			if (Input.GetKey ("w")) {
-				anim.SetInteger ("AnimationPar", 1);
+				anim.SetBool ("IsWalking", true);
 			}  else {
-				anim.SetInteger ("AnimationPar", 0);
+				anim.SetBool ("IsWalking", false);
 			}
 
 			if(controller.isGrounded){
