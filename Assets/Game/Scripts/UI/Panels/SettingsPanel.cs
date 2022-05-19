@@ -1,6 +1,8 @@
+using BugFixGames.BugFixGamesLocalization.Scripts.Controller;
 using BugfixGames.BugfixGamesUi.Runtime.Scripts;
 using BugFixGames.BugFixGamesUi.Runtime.Scripts;
 using Game.Scripts.Controllers;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,31 +12,27 @@ namespace Game.Scripts.UI.Panels
     {
         public override string ContextKey => nameof(SettingsPanel);
         
-        // [SerializeField] private Button toggleSoundButton;
         [SerializeField] private Button toggleMusicButton;
-        // [SerializeField] private Image soundIcon;
-        [SerializeField] private Image musicIcon;
         [SerializeField] private Button backButton;
-        // [SerializeField] private Sprite soundEnabledIcon;
-        // [SerializeField] private Sprite soundDisabledIcon;
+        [SerializeField] private TMP_Dropdown languageSelectionDropdown;
+        [SerializeField] private Image musicIcon;
         [SerializeField] private Sprite musicEnabledIcon;
         [SerializeField] private Sprite musicDisabledIcon;
+        
+        [SerializeField] private TextMeshProUGUI backButtonText;
 
         public override void Initialize()
         {
             base.Initialize();
             
-            // toggleSoundButton.onClick.AddListener(OnSoundEnabledClicked);
             toggleMusicButton.onClick.AddListener(OnMusicEnabledClicked);
             backButton.onClick.AddListener(OnCloseButtonClicked);
-        }
+            languageSelectionDropdown.onValueChanged.AddListener((value) => OnLanguageChanged(value));
 
-        // private void OnSoundEnabledClicked()
-        // {
-        //     SoundController.Instance.ToggleSound(!SoundController.Instance.soundEffectsEnabled);
-        //     SoundController.Instance.soundEffectsEnabled = !SoundController.Instance.soundEffectsEnabled;
-        //     soundIcon.sprite = SoundController.Instance.soundEffectsEnabled ? soundEnabledIcon : soundDisabledIcon;
-        // }
+            languageSelectionDropdown.value = BfgLocalizationController.Instance.GetSelectedLanguageIndex();
+            
+            backButtonText.text = BfgLocalizationController.Instance.Translate("back");
+        }
         
         private void OnMusicEnabledClicked()
         {
@@ -52,6 +50,21 @@ namespace Game.Scripts.UI.Panels
         {
             base.ResetFrame();
             musicIcon.sprite = SoundController.Instance.MusicEnabled ? musicEnabledIcon : musicDisabledIcon;
+        }
+
+        public void OnLanguageChanged(int index)
+        {
+            
+            Debug.Log(index);
+            switch (index)
+            {
+                case 0:
+                    BfgLocalizationController.Instance.SetDictionary(SystemLanguage.English);
+                    break;
+                case 1:
+                    BfgLocalizationController.Instance.SetDictionary(SystemLanguage.Turkish);
+                    break;
+            }
         }
     }
 }

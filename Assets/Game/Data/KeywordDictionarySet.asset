@@ -12,6 +12,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43bfe2e243adceb42b7165d2aabe8069, type: 3}
   m_Name: KeywordDictionarySet
   m_EditorClassIdentifier: 
-  keywordDictionary:
-    list: []
+  dictionaries:
+    list:
+    - Key: 10
+      Value:
+        list:
+        - Key: continue
+          Value: Continue
+        - Key: newgame
+          Value: New Game
+        - Key: levels
+          Value: Levels
+        - Key: exit
+          Value: Exit
+        - Key: back
+          Value: Back
+        - Key: level1
+          Value: Level\n1
+        - Key: level2
+          Value: Level\n2
+        - Key: level3
+          Value: Level\n3
+        keyCollision: 0
+    - Key: 37
+      Value:
+        list:
+        - Key: continue
+          Value: Devam
+        - Key: newgame
+          Value: Yeni Oyun
+        - Key: levels
+          Value: "B\xF6l\xFCmler"
+        - Key: exit
+          Value: "\xC7\u0131k\u0131\u015F"
+        - Key: back
+          Value: Geri
+        - Key: level1
+          Value: "B\xF6l\xFCm\\n1"
+        - Key: level2
+          Value: "B\xF6l\xFCm\\n2"
+        - Key: level3
+          Value: "B\xF6l\xFCm\\n3"
+        keyCollision: 0
     keyCollision: 0
