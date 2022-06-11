@@ -8355,7 +8355,7 @@ PrefabInstance:
     - target: {fileID: 6005489886811001125, guid: e2157fe8bae0c3943b7705e346d011d8, type: 3}
       propertyPath: spaceShipPart
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3361559030189621668}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2157fe8bae0c3943b7705e346d011d8, type: 3}
 --- !u!114 &385873126193624970 stripped
