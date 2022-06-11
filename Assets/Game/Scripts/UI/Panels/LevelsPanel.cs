@@ -26,9 +26,9 @@ namespace Game.Scripts.UI.Panels
         public override void Initialize()
         {
             base.Initialize();
-            level1Button.onClick.AddListener(() => OnLevelButtonClicked(0));
-            level2Button.onClick.AddListener(() => OnLevelButtonClicked(1));
-            level3Button.onClick.AddListener(() => OnLevelButtonClicked(2));
+            level1Button.onClick.AddListener(() => OnLevelButtonClicked(1));
+            level2Button.onClick.AddListener(() => OnLevelButtonClicked(2));
+            level3Button.onClick.AddListener(() => OnLevelButtonClicked(3));
             returnMenuButton.onClick.AddListener(() => OnCloseButtonClicked());
 
             level1ButtonText.text = BfgLocalizationController.Instance.Translate("level1");
