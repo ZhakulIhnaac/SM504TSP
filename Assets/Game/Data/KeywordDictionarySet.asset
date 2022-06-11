@@ -28,11 +28,11 @@ MonoBehaviour:
         - Key: back
           Value: Back
         - Key: level1
-          Value: Level\n1
+          Value: Level 1
         - Key: level2
-          Value: Level\n2
+          Value: Level 2
         - Key: level3
-          Value: Level\n3
+          Value: Level 3
         keyCollision: 0
     - Key: 37
       Value:
@@ -48,10 +48,10 @@ MonoBehaviour:
         - Key: back
           Value: Geri
         - Key: level1
-          Value: "B\xF6l\xFCm\\n1"
+          Value: "B\xF6l\xFCm 1"
         - Key: level2
-          Value: "B\xF6l\xFCm\\n2"
+          Value: "B\xF6l\xFCm 2"
         - Key: level3
-          Value: "B\xF6l\xFCm\\n3"
+          Value: "B\xF6l\xFCm 3"
         keyCollision: 0
     keyCollision: 0
