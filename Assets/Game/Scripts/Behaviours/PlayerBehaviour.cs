@@ -37,10 +37,10 @@ namespace Game.Scripts.Behaviours
             ////////////////DOOR/////////////////
             var gateObject = other.GetComponent<GateBehaviour>();
             
-            if (gateObject != null && keys.Count > 0)
+            if (gateObject != null && keys.Count == gateObject.requiredKeys)
             {
-                CollectKeyToggle(keys[^1], false);
-                gateObject.Open();
+                // CollectKeyToggle(keys[^1], false);
+                gateObject.Open(); 
             }
         }
 

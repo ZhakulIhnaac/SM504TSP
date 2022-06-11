@@ -13,6 +13,8 @@ namespace Game.Scripts.Behaviours
         [SerializeField] private GameObject canvas;
         [SerializeField] private Transform spaceShipPart;
 
+        public int requiredKeys;
+        
         public void Open()
         {
             Destroy(canvas);
