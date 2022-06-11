@@ -25,7 +25,7 @@ namespace Game.Scripts.Behaviours
             rightGate.transform.DORotate(new Vector3(0f, 90f, 0f), 0.3f)
                 .SetRelative(true);
 
-            spaceShipPart.DOMoveY(50f, 10f)
+            spaceShipPart.DOMoveY(50f, 4f)
                 .SetEase(Ease.Linear)
                 .SetRelative(true)
                 .OnComplete(() => Opened?.Invoke());
